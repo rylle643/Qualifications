@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cherylle P. Acotin — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #FAF8F4;
+  --white: #FFFFFF;
+  --charcoal: #1C1C1E;
+  --dark: #2D2D30;
+  --mid: #6B6B6F;
+  --light: #A8A8AE;
+  --border: #E5E2DB;
+  --accent: #2C5F8A;
+  --accent-light: #EAF1F8;
+  --gold: #B8860B;
+  --gold-light: #FDF6E3;
+  --tag: #F0EDE8;
+  --green: #1A7F5A;
+  --green-light: #E6F4EF;
+}
+
+html { font-size: 14px; }
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 940px;
+  margin: 40px auto;
+  background: var(--white);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+}
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--charcoal);
+  color: white;
+  padding: 52px 56px 44px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: 60px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: end;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 14px;
+}
+
+.name {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.name .accent-char { color: #7BAFD4; }
+
+.degree {
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.03em;
+}
+
+.contact-block { text-align: right; }
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.6);
+}
+.contact-row .icon {
+  width: 20px; height: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+.contact-row a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.contact-row a:hover { color: white; }
+
+/* ─── INTERNSHIP BANNER ─── */
+.intern-banner {
+  background: var(--green);
+  padding: 10px 56px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.intern-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.92);
+  font-weight: 500;
+}
+.intern-item .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #7EDCBA;
+  flex-shrink: 0;
+}
+.intern-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-right: 4px;
+}
+
+/* ─── BODY LAYOUT ─── */
+.body {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+
+/* ─── SIDEBAR ─── */
+.sidebar {
+  background: var(--cream);
+  padding: 36px 24px;
+  border-right: 1px solid var(--border);
+}
+
+.s-block { margin-bottom: 30px; }
+
+.s-heading {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--accent-light);
+}
+
+/* Skills */
+.skill-row {
+  margin-bottom: 12px;
+}
+.skill-row-title {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--mid);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 3px;
+  background: var(--tag);
+  color: var(--dark);
+  border: 1px solid var(--border);
+}
+.tag.primary {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: #C6DDF0;
+  font-weight: 600;
+}
+.tag.green {
+  background: var(--green-light);
+  color: var(--green);
+  border-color: #AADEC9;
+  font-weight: 600;
+}
+
+/* Soft skills list */
+.soft-list { list-style: none; }
+.soft-list li {
+  font-size: 12px;
+  color: var(--mid);
+  padding: 5px 0 5px 14px;
+  border-bottom: 1px dashed var(--border);
+  position: relative;
+  line-height: 1.45;
+}
+.soft-list li:last-child { border-bottom: none; }
+.soft-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Cert items */
+.cert-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 11px 13px;
+  margin-bottom: 9px;
+}
+.cert-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+.cert-meta {
+  font-size: 10.5px;
+  color: var(--light);
+  line-height: 1.4;
+}
+.cert-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 2px;
+  background: var(--gold-light);
+  color: var(--gold);
+  border: 1px solid #E8D89C;
+  margin-top: 4px;
+}
+
+/* Education */
+.edu-degree {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: 3px;
+}
+.edu-school {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.edu-meta { font-size: 11px; color: var(--light); }
+
+.coursework-list {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+.coursework-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--light);
+  margin-bottom: 6px;
+}
+.coursework-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+.cpill {
+  font-size: 10.5px;
+  padding: 2px 7px;
+  background: var(--tag);
+  border-radius: 2px;
+  color: var(--mid);
+  border: 1px solid var(--border);
+}
+
+/* ─── MAIN ─── */
+.main { padding: 36px 40px; }
+
+.section { margin-bottom: 32px; }
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Profile / Summary */
+.summary-text {
+  font-size: 13.5px;
+  color: var(--mid);
+  line-height: 1.8;
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Technical skills grid in main */
+.skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.skill-item {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.skill-item-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.skill-item-body {
+  font-size: 12.5px;
+  color: var(--mid);
+  line-height: 1.5;
+}
+
+/* Project cards */
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  transition: box-shadow .15s;
+}
+.project-card:hover { box-shadow: 0 2px 16px rgba(44,95,138,0.08); }
+
+.proj-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+.proj-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.proj-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+.proj-year {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--light);
+  letter-spacing: 0.05em;
+}
+.proj-tech {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 9px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 3px;
+  border: 1px solid #C6DDF0;
+}
+
+.proj-list { list-style: none; }
+.proj-list li {
+  font-size: 13px;
+  color: var(--mid);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 4px;
+  line-height: 1.55;
+}
+.proj-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #C6DDF0;
+}
+
+/* Academic bullets */
+.acad-list { list-style: none; }
+.acad-list li {
+  font-size: 13px;
+  color: var(--mid);
+  padding: 7px 0 7px 18px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  line-height: 1.55;
+}
+.acad-list li:last-child { border-bottom: none; }
+.acad-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Org entry */
+.org-entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.org-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 5px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+.org-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 1px;
+}
+.org-role {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.org-meta { font-size: 11px; color: var(--light); margin-bottom: 8px; }
+.org-body { list-style: none; }
+.org-body li {
+  font-size: 13px;
+  color: var(--mid);
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+}
+.org-body li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+/* ─── FOOTER ─── */
+.footer-strip {
+  background: var(--charcoal);
+  padding: 14px 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-strip span {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.06em;
+}
+
+/* ─── PRINT ─── */
+@media print {
+  body { background: #fff; }
+  .page { margin: 0; box-shadow: none; max-width: 100%; }
+  .project-card:hover { box-shadow: none; }
+  .skill-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 740px) {
+  .hero { padding: 36px 24px 32px; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .contact-block { text-align: left; }
+  .contact-row { justify-content: flex-start; }
+  .name { font-size: 36px; }
+  .body { grid-template-columns: 1fr; }
+  .sidebar { border-right: none; border-bottom: 1px solid var(--border); }
+  .main { padding: 28px 24px; }
+  .intern-banner { padding: 10px 24px; gap: 12px; }
+  .footer-strip { padding: 14px 24px; flex-direction: column; gap: 6px; text-align: center; }
+  .skill-grid { grid-template-columns: 1fr; }
+  .proj-top { flex-direction: column; }
+  .proj-right { align-items: flex-start; flex-direction: row; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Resume · Computer Engineering · Internship Applicant</div>
+        <div class="name">Cherylle <span class="accent-char">P.</span><br>Acotin</div>
+        <div class="degree">BS Computer Engineering &nbsp;·&nbsp; Lyceum of the Philippines University – Cavite &nbsp;·&nbsp; Expected 2027</div>
+      </div>
+      <div class="contact-block">
+        <div class="contact-row">
+          <div class="icon">📍</div>
+          <span>Blk 7 Lot 40 Villa Elena Ph.1<br>Langkaan I, Dasmariñas, Cavite</span>
+        </div>
+        <div class="contact-row">
+          <div class="icon">📞</div>
+          <span>(+63) 915-390-1821</span>
+        </div>
+        <div class="contact-row">
+          <div class="icon">✉</div>
+          <a href="mailto:cherylleacotin758@gmail.com">cherylleacotin758@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTERNSHIP BANNER -->
+  <div class="intern-banner">
+    <div class="intern-item">
+      <div class="dot"></div>
+      <span><span class="intern-label">Hours Required</span>300 Hours</span>
+    </div>
+    <div class="intern-item">
+      <div class="dot"></div>
+      <span><span class="intern-label">Available</span>Second Week of June</span>
+    </div>
+    <div class="intern-item">
+      <div class="dot"></div>
+      <span><span class="intern-label">Setup</span>Open to Onsite · Hybrid · Remote</span>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- SOFT SKILLS -->
+      <div class="s-block">
+        <div class="s-heading">Soft Skills</div>
+        <ul class="soft-list">
+          <li>Strong willingness to learn and adapt to new technologies</li>
+          <li>Detail-oriented and organized</li>
+          <li>Good communication and teamwork skills</li>
+          <li>Problem-solving and analytical thinking</li>
+          <li>Able to work independently or under supervision</li>
+          <li>Responsible and committed to assigned tasks</li>
+        </ul>
+      </div>
+
+      <!-- PROGRAMMING LANGUAGES (sidebar quick reference) -->
+      <div class="s-block">
+        <div class="s-heading">Programming Languages</div>
+        <div class="tags">
+          <span class="tag primary">Python</span>
+          <span class="tag primary">C#</span>
+          <span class="tag primary">C++</span>
+          <span class="tag green">HTML</span>
+          <span class="tag green">CSS</span>
+          <span class="tag green">JavaScript</span>
+        </div>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="s-block">
+        <div class="s-heading">Tools &amp; IDEs</div>
+        <div class="tags">
+          <span class="tag">PyCharm</span>
+          <span class="tag">Visual Studio 2022</span>
+          <span class="tag">Arduino IDE</span>
+          <span class="tag">Git</span>
+          <span class="tag">Canva</span>
+          <span class="tag">MS Office Suite</span>
+          <span class="tag">Google Workspace</span>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS -->
+      <div class="s-block">
+        <div class="s-heading">Certifications</div>
+        <div class="cert-card">
+          <div class="cert-name">Computer Hardware Basics</div>
+          <div class="cert-meta">DICT-ITU DTC Initiative<br>Cisco Networking Academy</div>
+          <div class="cert-badge">January 2026</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-name">EF SET English Certificate</div>
+          <div class="cert-meta">EF Education First<br>CEFR Level: B2 Upper Intermediate</div>
+          <div class="cert-badge">January 2026</div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="s-block">
+        <div class="s-heading">Education</div>
+        <div class="edu-degree">Bachelor of Science in<br>Computer Engineering</div>
+        <div class="edu-school">Lyceum of the Philippines<br>University – Cavite</div>
+        <div class="edu-meta">General Trias, Cavite, Philippines</div>
+        <div class="edu-meta" style="margin-top:4px;color:#2C5F8A;font-weight:600;">Anticipated: 2027</div>
+
+        <div class="coursework-list">
+          <div class="coursework-label">Relevant Coursework</div>
+          <div class="coursework-pills">
+            <span class="cpill">Programming</span>
+            <span class="cpill">Hardware Engineering</span>
+            <span class="cpill">Software Engineering</span>
+            <span class="cpill">Embedded Systems</span>
+          </div>
+        </div>
+
+        <div class="coursework-list" style="margin-top:10px;">
+          <div class="coursework-label">Memberships</div>
+          <div style="font-size:11.5px;color:var(--mid);line-height:1.5;">
+            Association of Computer Engineers United – LPU Cavite
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- PROFILE -->
+      <div class="section">
+        <div class="section-heading">Profile</div>
+        <div class="summary-text">
+          Motivated and detail-oriented Computer Engineering student from Lyceum of the Philippines University – Cavite seeking an internship opportunity to gain hands-on experience in IT support, software development, troubleshooting, networking, and engineering operations. Eager to apply academic knowledge in real-world environments while continuously learning new technologies and improving technical and problem-solving skills. Adaptable, fast learner, and capable of working independently or collaboratively in a team-oriented environment.
+        </div>
+      </div>
+
+      <!-- TECHNICAL SKILLS -->
+      <div class="section">
+        <div class="section-heading">Technical Skills</div>
+        <div class="skill-grid">
+          <div class="skill-item">
+            <div class="skill-item-title">💻 Programming Languages</div>
+            <div class="skill-item-body">Python, C#, C++, HTML, CSS, JavaScript</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">🗄 Database Concepts</div>
+            <div class="skill-item-body">Basic SQL and database management fundamentals</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">🔧 Troubleshooting</div>
+            <div class="skill-item-body">Hardware and software troubleshooting, OS installation and formatting</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">🌐 Networking</div>
+            <div class="skill-item-body">Basic networking concepts including Wi-Fi, routers, IP addressing, and connectivity troubleshooting</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">🖥 Operating Systems</div>
+            <div class="skill-item-body">Windows OS installation, configuration, and maintenance</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">📊 Productivity Tools</div>
+            <div class="skill-item-body">Microsoft Office (Word, Excel, PowerPoint) and Google Workspace</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">📄 Technical Documentation</div>
+            <div class="skill-item-body">Creating reports, documentation, and organizing system information</div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-item-title">⚡ Basic Electronics</div>
+            <div class="skill-item-body">Electronic principles, circuit analysis, and hardware components</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HANDS-ON PROJECTS (from resume) -->
+      <div class="section">
+        <div class="section-heading">Hands-On Projects</div>
+
+        <div class="project-card">
+          <div class="proj-top">
+            <div class="proj-title">Point-of-Sale (POS) System</div>
+            <div class="proj-right">
+              <div class="proj-year">2025</div>
+              <div class="proj-tech">C# · Windows Forms · Visual Studio 2022</div>
+            </div>
+          </div>
+          <ul class="proj-list">
+            <li>Developed a GUI-based POS system using Windows Forms for inventory, sales, and cashier operations.</li>
+            <li>Designed interactive forms for product management, order processing, and transaction handling.</li>
+            <li>Implemented real-time total calculation, change computation, and receipt generation.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-top">
+            <div class="proj-title">Smart Toll System using RFID</div>
+            <div class="proj-right">
+              <div class="proj-year">2026</div>
+              <div class="proj-tech">Arduino IDE · Embedded C</div>
+            </div>
+          </div>
+          <ul class="proj-list">
+            <li>Developed a miniaturized prototype of an automated toll gate system using RFID for vehicle identification.</li>
+            <li>Programmed microcontroller logic to authenticate RFID tags and control gate access mechanisms.</li>
+            <li>Integrated sensors and actuators to simulate real-time toll gate operations.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-top">
+            <div class="proj-title">Smart Lock System</div>
+            <div class="proj-right">
+              <div class="proj-year">2025</div>
+              <div class="proj-tech">Logic Gates · Digital Circuits</div>
+            </div>
+          </div>
+          <ul class="proj-list">
+            <li>Designed a password-based security system using logic gates for access control.</li>
+            <li>Implemented combinational logic circuits to validate user input via push buttons.</li>
+            <li>Utilized LEDs as status indicators to signal correct and incorrect password entries.</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <div class="proj-top">
+            <div class="proj-title">Meralco Billing System <span style="font-weight:400;font-style:italic;font-size:12px;">(Mock)</span></div>
+            <div class="proj-right">
+              <div class="proj-year">2024</div>
+              <div class="proj-tech">Python</div>
+            </div>
+          </div>
+          <ul class="proj-list">
+            <li>Created a billing system that computes electricity costs including tax calculations.</li>
+            <li>Designed user input validation and structured output formatting.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ACADEMIC PROJECTS -->
+      <div class="section">
+        <div class="section-heading">Academic Activities</div>
+        <ul class="acad-list">
+          <li>Developed Python-based systems for employee salary computation and assessment management.</li>
+          <li>Worked on patient record and appointment management system projects.</li>
+          <li>Performed circuit analysis, troubleshooting, and electronics laboratory activities.</li>
+          <li>Created simple web pages and user interface layouts using HTML and CSS.</li>
+          <li>Participated in programming and systems-related academic activities involving debugging and logical analysis.</li>
+        </ul>
+      </div>
+
+      <!-- ORGANIZATIONAL -->
+      <div class="section">
+        <div class="section-heading">Organizational &amp; Leadership Experience</div>
+        <div class="org-entry">
+          <div class="org-dot"></div>
+          <div>
+            <div class="org-title">Association of Computer Engineers United – LPU Cavite</div>
+            <div class="org-role">Creative Committee Member</div>
+            <div class="org-meta">LPU – Cavite &nbsp;·&nbsp; A.Y. 2023 – 2025</div>
+            <ul class="org-body">
+              <li>Enhanced creativity and collaboration skills through active participation in organization events.</li>
+              <li>Created posters, flyers, and social media graphics using Canva for school organization campaigns and events.</li>
+              <li>Collaborated with team members to plan and deliver creative materials within set timelines.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div><!-- /body -->
+
+  <!-- FOOTER -->
+  <div class="footer-strip">
+    <span>Cherylle P. Acotin &nbsp;·&nbsp; BS Computer Engineering · LPU Cavite</span>
+    <span>cherylleacotin758@gmail.com &nbsp;·&nbsp; (+63) 915-390-1821</span>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
